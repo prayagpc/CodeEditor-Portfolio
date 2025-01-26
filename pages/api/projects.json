@@ -1,0 +1,40 @@
+[
+  
+  {
+    "id": 1,
+    "name": "NewsFlowAPI",
+    "image": "/NewsFlow.jpg",
+    "description": "Developed a secure News API with Node.js, Express.js, Prisma, and PostgreSQL, implementing authentication, authorization, CRUD operations, and validation. Enhanced security with Helmet, used Redis cache, integrated Winston logging, and ensured file uploading, pagination, and rate limiting.",
+    "tags": ["Node.js", "Express", "Prisma", "PostgreSql", "REST API", "Redis", "Helmet", "Winston"],
+    "source_code": "https://github.com/prayagpc/NewsApi",
+    "demo": "https://github.com/prayagpc/NewsApi"
+  },
+  {
+    "id": 2,
+    "name": "Bookify",
+    "image": "/Bookify.png",
+    "description": "Developed Bookify, a Node.js and Express web app with PostgreSQL, featuring CRUD operations, OpenLibrary API integration, sorting, and user authentication, showcasing expertise in full-stack development, database management, and deployment.",
+    "tags": ["Node.js", "Express.js", "PostgreSql", "REST API", "CRUD", "OpenLibrary API"],
+    "source_code": "https://github.com/prayagpc/Bookify",
+    "demo": "https://bookify-94uw.onrender.com"
+  },
+  {
+    "id": 3,
+    "name": "Inventory Management System",
+    "image": "/IMS.jpg",
+    "description": "Developed an Inventory Management System with Node.js, Express.js, React.js, and MongoDB Atlas. Co-led a team, ensuring timely milestones. Designed backend logic, developed RESTful APIs with CRUD operations, and implemented authentication. Created reusable frontend components, handled validations, and managed code on GitHub.",
+    "tags": ["Node.js", "Express.js", "React", "MongoDB Atlas", "REST API"],
+    "source_code": "https://github.com/SpringBoardMentor-102/InventoryManagement-Team-01",
+    "demo": "https://github.com/SpringBoardMentor-102/InventoryManagement-Team-01"
+  },
+  
+  {
+    "id": 4,
+    "name": "EcoMart",
+    "image": "/Ecomart.png",
+    "description": "Developed EcoMart, a full-stack grocery e-commerce app with Next.js for the frontend and Strapi as the backend CMS. Implemented secure user authentication, dynamic shopping cart, and payment gateway integration for seamless transactions.",
+    "tags": ["Next.js", "React", "TailwindCSS", "Strapi", "PostgreSql"],
+    "source_code": "https://github.com/prayagpc/EcoMart",
+    "demo": "https://eco-mart-2qnx.vercel.app"
+  }
+]

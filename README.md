@@ -3,7 +3,7 @@
 
 A Normal Life is Boring.
 
-### Full-Stack Enfineer
+### Full-Stack Engineer
 
 #### Personal Details
 - **Name:** Prayag Choudhary

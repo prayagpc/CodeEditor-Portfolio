@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "postbuild": "next-sitemap"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.6.0",
@@ -14,6 +15,7 @@
     "@fortawesome/react-fontawesome": "^0.2.2",
     "dotenv": "^16.4.5",
     "next": "^14.2.14",
+    "next-sitemap": "^4.2.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-github-calendar": "^3.2.2",

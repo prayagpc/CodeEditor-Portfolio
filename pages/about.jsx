@@ -1,16 +1,35 @@
 import Image from 'next/image';
 import styles from '../styles/About.module.css';
 
+// Skills data for better maintainability
+const SKILLS = [
+  { name: 'JavaScript', proficiency: 89 },
+  { name: 'ReactJS & NextJS', proficiency: 85 },
+  { name: 'CSS, Bootstrap & TailwindCSS', proficiency: 92 },
+  { name: 'ExpressJS & NodeJS', proficiency: 85 },
+  { name: 'PostgreSQL & MongoDB', proficiency: 80 },
+  { name: 'Java', proficiency: 75 },
+  { name: 'Firebase & Appwrite', proficiency: 85 },
+  { name: 'Git & Postman', proficiency: 85 }
+];
+
+// Personal info data
+const PERSONAL_INFO = [
+  { label: 'Name', value: 'Prayag Choudhary' },
+  { label: 'Nationality', value: 'India 🇮🇳' },
+  { label: 'College Degree', value: 'B.Tech in Computer Science and Engineering' }
+];
+
 export default function AboutMe() {
   return (
-    <div className={styles.about}>
+    <section className={styles.about}>
       <div className={styles.container}>
+        {/* Profile Section */}
         <div className={styles.grid}>
           <div className={styles.imageContainer} data-aos="fade-right">
             <Image
               src="/Logo1.jpeg"
-              alt="About Me"
-              
+              alt="Prayag Choudhary"
               width={150}
               height={150}
               priority
@@ -18,89 +37,53 @@ export default function AboutMe() {
             />
           </div>
           <div className={styles.textContainer} data-aos="fade-left">
-            <h3 className={styles.textHead}>Full Stack Engineer</h3>
+            <h1 className={styles.textHead}>Full Stack Engineer</h1>
             <ul className={styles.list}>
-              <li className={styles.listItem}>
-                <i className={`${styles.icon} bi bi-chevron-right`}></i>
-                <span><strong className={styles.strong}>Name: </strong>
-                  Prayag Choudhary</span>
-              </li>
-              <li className={styles.listItem}>
-                <i className={`${styles.icon} bi bi-chevron-right`}></i>
-                <span> <strong className={styles.strong}>Nationality: </strong>
-                India 🇮🇳</span>
-              </li>
-              <li className={styles.listItem}>
-                <i className={`${styles.icon} bi bi-chevron-right`}></i>
-                <span><strong className={styles.strong}>College Degree: </strong>
-                B.Tech in Computer Science and Engineering</span>
-              </li>
+              {PERSONAL_INFO.map((info, index) => (
+                <li key={index} className={styles.listItem}>
+                  <i className={`${styles.icon} bi bi-chevron-right`}></i>
+                  <span>
+                    <strong className={styles.strong}>{info.label}: </strong>
+                    {info.value}
+                  </span>
+                </li>
+              ))}
             </ul>
           </div>
         </div>
+
+        {/* Bio Section */}
         <div className={styles.paragraph}>
-        Experienced Full Stack Engineer passionate about building reliable, scalable solutions. I approach coding with a problem-solving mindset, where every line is an adventure<span className={styles.paragraphSpan}>—Sometimes Easy, Sometimes Bug-Filled.</span></div>
+          Experienced Full Stack Engineer passionate about building reliable, scalable solutions. 
+          I approach coding with a problem-solving mindset, where every line is an adventure
+          <span className={styles.paragraphSpan}>—Sometimes Easy, Sometimes Bug-Filled.</span>
+        </div>
 
         {/* Skills Section */}
         <div className={styles.skillsSection}>
-        <h3 className={styles.textHead}>Skills</h3>
+          <h2 className={styles.textHead}>Skills</h2>
           <div className={styles.skillsGrid}>
-            <div className={styles.skill}>
-              <span className={styles.skillName}>JavaScript</span>
-              <div className={styles.progressBar}>
-                <div className={styles.progress} style={{ width: '89%' }}></div>
+            {SKILLS.map((skill, index) => (
+              <div key={index} className={styles.skill}>
+                <span className={styles.skillName}>{skill.name}</span>
+                <div className={styles.progressBar}>
+                  <div 
+                    className={styles.progress} 
+                    style={{ width: `${skill.proficiency}%` }}
+                    aria-valuenow={skill.proficiency}
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  ></div>
+                </div>
               </div>
-            </div>
-            <div className={styles.skill}>
-              <span className={styles.skillName}>ReactJS & NextJS  </span>
-              <div className={styles.progressBar}>
-                <div className={styles.progress} style={{ width: '85%' }}></div>
-              </div>
-            </div>
-            <div className={styles.skill}>
-              <span className={styles.skillName}>CSS, Bootstrap & TailwindCSS</span>
-              <div className={styles.progressBar}>
-                <div className={styles.progress} style={{ width: '92%' }}></div>
-              </div>
-            </div>
-            <div className={styles.skill}>
-              <span className={styles.skillName}>ExpressJS & NodeJS</span>
-              <div className={styles.progressBar}>
-                <div className={styles.progress} style={{ width: '85%' }}></div>
-              </div>
-            </div>
-            <div className={styles.skill}>
-              <span className={styles.skillName}>PostgreSQL & MongoDB</span>
-              <div className={styles.progressBar}>
-                <div className={styles.progress} style={{ width: '80%' }}></div>
-              </div>
-            </div>
-            <div className={styles.skill}>
-              <span className={styles.skillName}>Java</span>
-              <div className={styles.progressBar}>
-                <div className={styles.progress} style={{ width: '75%' }}></div>
-              </div>
-            </div>
-            <div className={styles.skill}>
-              <span className={styles.skillName}>Firebase & Appwrite</span>
-              <div className={styles.progressBar}>
-                <div className={styles.progress} style={{ width: '85%' }}></div>
-              </div>
-            </div>
-            <div className={styles.skill}>
-              <span className={styles.skillName}>Git & Postman</span>
-              <div className={styles.progressBar}>
-                <div className={styles.progress} style={{ width: '85%' }}></div>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 
-// Fetch static props if needed for SSR or static generation
 export async function getStaticProps() {
   return {
     props: { title: 'About' },

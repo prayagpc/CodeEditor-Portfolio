@@ -3,6 +3,7 @@ import Layout from "../components/Layout";
 import Head from "../components/Head";
 import "../styles/globals.css";
 import "../styles/themes.css";
+import { ThemeProvider } from "../context/ThemeContext";
 
 function MyApp({ Component, pageProps }) {
 
@@ -16,10 +17,13 @@ function MyApp({ Component, pageProps }) {
   }, []);
 
   return (
+    <ThemeProvider>
     <Layout>
       <Head title={`Prayag Choudhary | ${pageProps.title}`} />
       <Component {...pageProps} />
     </Layout>
+    </ThemeProvider>
+      
   );
 }
 

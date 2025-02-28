@@ -17,7 +17,7 @@ const CustomHead = ({ title = 'Prayag Choudhary' }) => {
         property="og:description"
         content="Building efficient, scalable web applications and tackling complex problems with creativity and determination."
       />
-      <meta property="og:url" content="https://github.com/prayagpc" />
+      <meta property="og:url" content="https://prayagpc.me" />
     </Head>
   );
 };

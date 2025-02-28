@@ -22,6 +22,7 @@
   --scrollbar-track-bg: #24292e;
   --scrollbar-thumb-bg: #333536;
   --article-bg: #1f2428;
+  --github-bg: #1F2429;
 }
 
 /* Dracula */
@@ -48,6 +49,7 @@
   --scrollbar-track-bg: #282a36;
   --scrollbar-thumb-bg: #454647;
   --article-bg: #21222c;
+  --github-bg: #21222c;
 }
 
 /* Ayu Dark */
@@ -74,6 +76,7 @@
   --scrollbar-track-bg: #0a0e14;
   --scrollbar-thumb-bg: #454647;
   --article-bg: #10121a;
+  --github-bg: #0a0e14;
 }
 
 /* Ayu Mirage */
@@ -100,6 +103,7 @@
   --scrollbar-track-bg: #1f2430;
   --scrollbar-thumb-bg: #454647;
   --article-bg: #252e3d;
+  --github-bg: #21263a;
 }
 
 /* Nord */
@@ -126,6 +130,7 @@
   --scrollbar-track-bg: #2e3440;
   --scrollbar-thumb-bg: #454647;
   --article-bg: #363f50;
+  --github-bg: #212939;
 }
 
 /* Night Owl */
@@ -152,6 +157,7 @@
   --scrollbar-track-bg: #011627;
   --scrollbar-thumb-bg: #043254;
   --article-bg: #031d33;
+  --github-bg: #012a4a;
 }
 
 /* Monokai Pro */
@@ -178,6 +184,7 @@
   --scrollbar-track-bg: #2d2a2e;
   --scrollbar-thumb-bg: #403e41;
   --article-bg: #363438;
+  --github-bg: #38333a;
   
 }
 
@@ -205,6 +212,7 @@
   --scrollbar-track-bg: #262335;
   --scrollbar-thumb-bg: #2f2b42;
   --article-bg: #2a2742;
+  --github-bg: #2b213a;
   
 }
 
@@ -232,6 +240,7 @@
   --scrollbar-track-bg: #f6f8fa;
   --scrollbar-thumb-bg: #d1d5da;
   --article-bg: #ffffff;
+  --github-bg: #f5f5f5;
 }
 
 /* Solarized Light */
@@ -258,6 +267,7 @@
   --scrollbar-track-bg: #eee8d5;
   --scrollbar-thumb-bg: #d5cdb6;
   --article-bg: #fdf6e3;
+  --github-bg: #ddd3b9;
 }
 
 /* Winter is Coming */
@@ -284,6 +294,7 @@
   --scrollbar-track-bg: #1e2a35;
   --scrollbar-thumb-bg: #2b3e50;
   --article-bg: #243240;
+  --github-bg: #27323f;
 }
 
 /* Material Theme */
@@ -310,6 +321,7 @@
   --scrollbar-track-bg: #263238;
   --scrollbar-thumb-bg: #344046;
   --article-bg: #2e3c43;
+  --github-bg: #2c3e50;
 }
 
 

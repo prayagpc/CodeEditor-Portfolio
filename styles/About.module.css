@@ -235,9 +235,7 @@
       max-width: 400px;
     }
     
-    .paragraph {
-      text-align: center;
-    }
+    
     
     .skillsGrid {
       grid-template-columns: 1fr;

@@ -73,8 +73,8 @@ const Sidebar = () => {
                 <Icon
                   fill={
                     router.pathname === path
-                      ? 'rgb(225, 228, 232)'
-                      : 'rgb(106, 115, 125)'
+                      ? 'var(--text-color)'
+                      : 'var(--text-color)'
                   }
                   className={styles.icon}
                 />
@@ -95,8 +95,8 @@ const Sidebar = () => {
                 <Icon
                   fill={
                     router.pathname === path
-                      ? 'rgb(225, 228, 232)'
-                      : 'rgb(106, 115, 125)'
+                      ? 'var(--text-color)'
+                      : 'var(--text-color)'
                   }
                   className={styles.icon}
                 />

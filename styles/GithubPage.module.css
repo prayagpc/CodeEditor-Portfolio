@@ -18,7 +18,8 @@
   display: flex;
   align-items: center;
   gap: 1.5rem;
-  background-color: #1F2429;
+  /* background-color: #1F2429; */
+  background-color: var(--github-bg);
   padding: 1rem;
   border-radius: 8px;
   margin-bottom: 1.5rem;
@@ -49,7 +50,8 @@
 }
 
 .username {
-  color: #dedede;
+  /* color: #dedede; */
+  color: var(--text-color);
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-size: 1.75rem;
   margin: 0 0 0.5rem 0;
@@ -62,7 +64,9 @@
 }
 
 .userStat {
-  color: #dedede;
+  /* color: #dedede; */
+  color: var(--text-color);
+
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   font-size: 0.9rem;
 }
@@ -96,7 +100,7 @@
 }
 
 .contributions {
-  background-color: #1F2429;
+  background-color: var(--github-bg);
   padding: 1.5rem;
   border-radius: 8px;
   overflow-x: auto;

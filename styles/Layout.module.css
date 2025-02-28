@@ -37,5 +37,7 @@
 @media screen and (max-width: 600px) {
   .content {
     padding: 2rem 1rem;
+  scrollbar-width: none;
+
   }
 }

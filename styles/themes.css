@@ -22,6 +22,7 @@
   --scrollbar-track-bg: #24292e;
   --scrollbar-thumb-bg: #333536;
   --article-bg: #1f2428;
+  --github-bg: #1F2429;
 }
 
 /* Dracula */
@@ -48,6 +49,7 @@
   --scrollbar-track-bg: #282a36;
   --scrollbar-thumb-bg: #454647;
   --article-bg: #21222c;
+  --github-bg: #21222c;
 }
 
 /* Ayu Dark */
@@ -74,6 +76,7 @@
   --scrollbar-track-bg: #0a0e14;
   --scrollbar-thumb-bg: #454647;
   --article-bg: #10121a;
+  --github-bg: #0a0e14;
 }
 
 /* Ayu Mirage */
@@ -100,6 +103,7 @@
   --scrollbar-track-bg: #1f2430;
   --scrollbar-thumb-bg: #454647;
   --article-bg: #252e3d;
+  --github-bg: #21263a;
 }
 
 /* Nord */
@@ -126,6 +130,7 @@
   --scrollbar-track-bg: #2e3440;
   --scrollbar-thumb-bg: #454647;
   --article-bg: #363f50;
+  --github-bg: #212939;
 }
 
 /* Night Owl */
@@ -152,7 +157,173 @@
   --scrollbar-track-bg: #011627;
   --scrollbar-thumb-bg: #043254;
   --article-bg: #031d33;
+  --github-bg: #012a4a;
 }
+
+/* Monokai Pro */
+[data-theme="monokai-pro"] {
+  --main-bg: #2d2a2e;
+  --bg-text: #363438;
+  --text-color: #fcfcfa;
+  --accent-color: #ff6188;
+  --titlebar-bg: #221f22;
+  --sidebar-bg: #2d2a2e;
+  --sidebar-hover-bg: #403e41;
+  --explorer-bg: #221f22;
+  --explorer-hover-bg: #2d2a2e;
+  --explorer-border: transparent;
+  --tabs-bg: #221f22;
+  --tab-bg: #2d2a2e;
+  --tab-active-bg: #403e41;
+  --tab-border: transparent;
+  --bottombar-bg: #221f22;
+  --bottombar-border: #19181a;
+  --button-bg: #a9dc76;
+  --button-text: #2d2a2e;
+  --bottombar-hover-bg: #403e41;
+  --scrollbar-track-bg: #2d2a2e;
+  --scrollbar-thumb-bg: #403e41;
+  --article-bg: #363438;
+  --github-bg: #38333a;
+  
+}
+
+/* Synthwave '84 */
+[data-theme="synthwave-84"] {
+  --main-bg: #262335;
+  --bg-text: #2a2742;
+  --text-color: #f92aad;
+  --accent-color: #36f9f6;
+  --titlebar-bg: #241b2f;
+  --sidebar-bg: #262335;
+  --sidebar-hover-bg: #2f2b42;
+  --explorer-bg: #241b2f;
+  --explorer-hover-bg: #262335;
+  --explorer-border: transparent;
+  --tabs-bg: #241b2f;
+  --tab-bg: #262335;
+  --tab-active-bg: #2f2b42;
+  --tab-border: transparent;
+  --bottombar-bg: #241b2f;
+  --bottombar-border: #1a1625;
+  --button-bg: #f97e72;
+  --button-text: #241b2f;
+  --bottombar-hover-bg: #2f2b42;
+  --scrollbar-track-bg: #262335;
+  --scrollbar-thumb-bg: #2f2b42;
+  --article-bg: #2a2742;
+  --github-bg: #2b213a;
+  
+}
+
+/* GitHub Light */
+[data-theme="github-light"] {
+  --main-bg: #ffffff;
+  --bg-text: #f6f8fa;
+  --text-color: #24292e;
+  --accent-color: #0366d6;
+  --titlebar-bg: #f6f8fa;
+  --sidebar-bg: #f6f8fa;
+  --sidebar-hover-bg: #e1e4e8;
+  --explorer-bg: #f6f8fa;
+  --explorer-hover-bg: #e1e4e8;
+  --explorer-border: #e1e4e8;
+  --tabs-bg: #f6f8fa;
+  --tab-bg: #f6f8fa;
+  --tab-active-bg: #ffffff;
+  --tab-border: #e1e4e8;
+  --bottombar-bg: #f6f8fa;
+  --bottombar-border: #e1e4e8;
+  --button-bg: #2ea44f;
+  --button-text: #ffffff;
+  --bottombar-hover-bg: #e1e4e8;
+  --scrollbar-track-bg: #f6f8fa;
+  --scrollbar-thumb-bg: #d1d5da;
+  --article-bg: #ffffff;
+  --github-bg: #f5f5f5;
+}
+
+/* Solarized Light */
+[data-theme="solarized-light"] {
+  --main-bg: #fdf6e3;
+  --bg-text: #eee8d5;
+  --text-color: #657b83;
+  --accent-color: #268bd2;
+  --titlebar-bg: #eee8d5;
+  --sidebar-bg: #eee8d5;
+  --sidebar-hover-bg: #e0dbcb;
+  --explorer-bg: #eee8d5;
+  --explorer-hover-bg: #e0dbcb;
+  --explorer-border: #d5cdb6;
+  --tabs-bg: #eee8d5;
+  --tab-bg: #eee8d5;
+  --tab-active-bg: #fdf6e3;
+  --tab-border: #d5cdb6;
+  --bottombar-bg: #eee8d5;
+  --bottombar-border: #d5cdb6;
+  --button-bg: #859900;
+  --button-text: #fdf6e3;
+  --bottombar-hover-bg: #e0dbcb;
+  --scrollbar-track-bg: #eee8d5;
+  --scrollbar-thumb-bg: #d5cdb6;
+  --article-bg: #fdf6e3;
+  --github-bg: #ddd3b9;
+}
+
+/* Winter is Coming */
+[data-theme="winter-is-coming"] {
+  --main-bg: #1e2a35;
+  --bg-text: #243240;
+  --text-color: #a7dbf7;
+  --accent-color: #00bff9;
+  --titlebar-bg: #0b1015;
+  --sidebar-bg: #1e2a35;
+  --sidebar-hover-bg: #2b3e50;
+  --explorer-bg: #0b1015;
+  --explorer-hover-bg: #1e2a35;
+  --explorer-border: transparent;
+  --tabs-bg: #0b1015;
+  --tab-bg: #1e2a35;
+  --tab-active-bg: #2b3e50;
+  --tab-border: transparent;
+  --bottombar-bg: #0b1015;
+  --bottombar-border: #0b1015;
+  --button-bg: #00bff9;
+  --button-text: #0b1015;
+  --bottombar-hover-bg: #2b3e50;
+  --scrollbar-track-bg: #1e2a35;
+  --scrollbar-thumb-bg: #2b3e50;
+  --article-bg: #243240;
+  --github-bg: #27323f;
+}
+
+/* Material Theme */
+[data-theme="material-theme"] {
+  --main-bg: #263238;
+  --bg-text: #2e3c43;
+  --text-color: #eeffff;
+  --accent-color: #80cbc4;
+  --titlebar-bg: #1a2327;
+  --sidebar-bg: #263238;
+  --sidebar-hover-bg: #344046;
+  --explorer-bg: #1a2327;
+  --explorer-hover-bg: #263238;
+  --explorer-border: transparent;
+  --tabs-bg: #1a2327;
+  --tab-bg: #263238;
+  --tab-active-bg: #344046;
+  --tab-border: transparent;
+  --bottombar-bg: #1a2327;
+  --bottombar-border: #1a2327;
+  --button-bg: #80cbc4;
+  --button-text: #1a2327;
+  --bottombar-hover-bg: #344046;
+  --scrollbar-track-bg: #263238;
+  --scrollbar-thumb-bg: #344046;
+  --article-bg: #2e3c43;
+  --github-bg: #2c3e50;
+}
+
 
 body {
   background-color: #1F2428;

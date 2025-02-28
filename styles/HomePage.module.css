@@ -1,34 +1,49 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap');
 
+/* Main container */
+.mainContainer {
+  width: 100%;
+  overflow-x: hidden;
+}
+
 .container {
   display: flex;
   justify-content: center;
-  height: 75vh;
+  min-height: 70vh;
   flex-direction: column;
   position: relative;
+  padding: 2rem 1rem;
 }
 
+/* Background text */
 .background {
   font-size: 5rem;
-  font-family: 'Montserrat';
+  font-family: 'Montserrat', sans-serif;
   line-height: 1.1;
-  color: var(--bg-text);
+  color: var(--bg-text, rgba(255, 255, 255, 0.05));
   position: absolute;
   z-index: 1;
   transform: translateY(-20%);
-
+  top: 20%;
+  left: 0;
 }
 
+/* Content positioning */
 .foreground {
   z-index: 2;
   display: flex;
-  color: var(--accent-color);
+  color: var(--accent-color, #3b5998);
   justify-content: space-around;
   align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
+/* Name styling */
 .name {
-  color: #eee;
+  /* color: #eee; */
+  color: var(--text-color);
   font-size: 4rem;
   font-weight: 500;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -36,18 +51,21 @@
   margin-bottom: 0.5rem;
 }
 
+/* Bio styling with typing animation */
 .bio {
-  width: max-content;
-  color: #eee;
+  /* color: #eee; */
+  color: var(--text-color);
+
   font-size: 2rem;
   font-weight: 300;
   margin-bottom: 3rem;
   position: relative;
+  display: inline-block;
+  white-space: nowrap;
 }
 
 .react {
   color: #0088cc;
-  /* -webkit-text-stroke: 1px #2d2d2d; */
   text-shadow: 2px 2px 4px #000;
 }
 
@@ -62,14 +80,14 @@
 }
 
 .bio::before {
-  background: var(--main-bg);
+  background: var(--main-bg, #121212);
   animation: typewriter 2.5s steps(24) 500ms forwards;
 }
 
 .bio::after {
   margin-left: 0.4rem;
   width: 0.125em;
-  background: var(--accent-color);
+  background: var(--accent-color, #3b5998);
   animation: typewriter 2.5s steps(24) 500ms forwards,
     blink 750ms steps(24) infinite;
 }
@@ -86,164 +104,282 @@
   }
 }
 
+/* Button styles */
+.buttonContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.linkButton {
+  text-decoration: none;
+}
+
 .button {
-  background: var(--accent-color);
+  background: var(--accent-color, #3b5998);
   font-size: 1.25rem;
-  padding: 0.5rem 1rem;
-  margin-right: 1.5rem;
-  color: #eee;
+  padding: 0.5rem 1.5rem;
+  /* color: #eee; */
+  color: var(--text-color);
   font-weight: 600;
   border: none;
+  border-radius: 4px;
   cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .outlined {
   font-size: 1.25rem;
-  padding: 0.5rem 1rem;
-  color: #eee;
-  border: 2px solid var(--accent-color);
+  padding: 0.5rem 1.5rem;
+  /* color: #eee; */
+  color: var(--text-color);
+
+  border: 2px solid var(--accent-color, #3b5998);
   background: transparent;
+  border-radius: 4px;
   cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .button:hover,
 .outlined:hover {
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  transform: translateY(-2px);
 }
 
-.illustration {
-  height: 500px;
-  width: 460px;
+.workBtn {
+  background-color: #3b5998;
 }
 
+.contactBtn {
+  border: 2px solid #3b5998;
+}
+
+/* Image styles */
+.imageWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.myImg {
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); */
+  border-radius: 8px;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.myImg:hover {
+  /* box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); */
+  transform: scale(1.02);
+}
+
+/* Skills section */
+.skillsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 1.5rem;
+  margin: 2rem 0;
+  margin-top: 0.5rem;
+}
+
+.skillItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.skillItem .skillText {
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: bold;
+  color: #eee;
+  color: var(--text-color);
+
+}
+
+.icon {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  width: 3rem;
+  height: 3rem;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* Icon specific colors */
+.reactIcon {
+  color: #0088cc;
+}
+
+.jsIcon {
+  
+  color: #f7e018;
+}
+
+.nodeIcon {
+  color: #8cc84b;
+}
+
+
+
+/* Media Queries */
 /* 4K Screens */
 @media screen and (min-width: 2000px) {
   .background {
     font-size: 8.5rem;
   }
+  
   .content {
     padding: 0 3rem;
   }
+  
   .name {
     font-size: 6rem;
   }
+  
   .bio {
     font-size: 3rem;
     margin-bottom: 5rem;
   }
-  .button {
-    font-size: 2rem;
-  }
+  
+  .button, 
   .outlined {
     font-size: 2rem;
+    padding: 0.75rem 2rem;
   }
-  .illustration {
-    height: 900px;
-    width: 700px;
+  
+  .skillsContainer {
+    gap: 2.5rem;
   }
-}
-
-/* iPad Pro */
-@media screen and (max-width: 1100px) {
-  .background {
-    display: none;
-  }
-  .container {
-    display: block;
-  }
-  .foreground {
-    margin: 4rem 0;
-    display: block;
-    text-align: center;
-  }
-  .name {
+  
+  .icon {
     font-size: 4rem;
   }
+  
+  .nextIcon {
+    width: 4rem;
+    height: 4rem;
+  }
+  
+  .skillItem .skillText {
+    font-size: 1.25rem;
+  }
+ 
+}
+
+/* Large tablets and smaller desktop */
+@media screen and (max-width: 1100px) {
+  .background {
+    font-size: 4rem;
+    padding: 8rem 2rem;
+
+    
+    /* opacity: 0.1; */
+  }
+  
+  .foreground {
+    flex-direction: row;
+    gap: 4rem;
+  }
+  
+  .content {
+    text-align: center;
+    width: 100%;
+  }
+  .buttonContainer {
+    justify-content: center;
+  }
+  
+  .name {
+    font-size: 3.5rem;
+  }
+  
   .bio {
     font-size: 1.75rem;
-    margin: 0.75rem auto 3rem;
+    margin: 0.75rem auto 2rem;
   }
-  .illustration {
-    position: absolute;
-    bottom: -50px;
-    right: 0;
-    height: 700px;
-    width: 600px;
+  
+  .skillsContainer {
+    justify-content: center;
   }
+  
+  
 }
 
-/* iPad */
-/* @media screen and (max-width: 900px) {
-  .foreground {
-    margin: 2rem 0;
-  }
-  .name {
-    font-size: 3rem;
-    margin-bottom: 0.5rem;
-  }
-  .bio {
-    font-size: 1.5rem;
-  }
-  .illustration {
-    height: 550px;
-    width: 420px;
-    bottom: -50px;
-  }
-} */
-
-@media screen and (orientation: landscape) and (max-width: 1050px) {
+/* Medium tablets */
+@media screen and (max-width: 900px) {
   .container {
-    display: flex;
-    margin: 100px 0;
+    padding-top: 4rem;
   }
-  .illustration {
+  .foreground {
+    gap: 1rem;
+  }
+  .myImg {
     display: none;
   }
+  
+  .buttonContainer {
+    justify-content: center;
+  }
+  .skillsContainer {
+    gap: 1.25rem;
+  }
+  
 }
 
-/* Phone */
+/* Phones and small tablets */
 @media screen and (max-width: 600px) {
-  .foreground {
-    margin: 0;
+  .background {
+    font-size: 2rem;
+    display: none;
   }
+  
+  .container {
+    padding: 4rem 1rem;
+    justify-content: flex-start;
+    scrollbar-width: none;
 
+  }
+  
+  .name {
+    font-size: 2.5rem;
+  }
+  
+  .bio {
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+  }
+  
   .bio::after {
-    margin-left: 0.4rem;
-    width: 0.125em;
-    background: none;
     animation: typewriter 2.5s steps(24) 500ms forwards,
       blink 750ms steps(24) infinite;
   }
-  .name {
-    font-size: 2rem;
-  }
-  .bio {
-    font-size: 1.25rem;
-    margin-bottom: 2rem;
-  }
-  .button {
-    font-size: 1rem;
-  }
+  
+  .button, 
   .outlined {
     font-size: 1rem;
+    padding: 0.5rem 1rem;
+    width: 100%;
   }
-  .illustration {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 75vw;
-    height: 50vh;
-    z-index: 1;
+  
+  .buttonContainer {
+    flex-direction: column;
+    width: 100%;
   }
-}
-
-/* hide as long as it is not a pc view ie 900px min */
-@media screen and (max-width: 900px) {
-  .container {
-      margin-top: 100px;
-    }
-
-    .bio {
-  width: 100%;
-    }
+  
+  .icon {
+    font-size: 2rem;
+  }
+  
+  .nextIcon {
+    width: 2rem;
+    height: 2rem;
+  }
+  
+  .skillItem .skillText {
+    font-size: 0.75rem;
+  }
 }

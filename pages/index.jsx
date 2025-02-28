@@ -1,83 +1,93 @@
 import Link from 'next/link';
-import styles from '../styles/HomePage.module.css';
-import styling from '../styles/Home.module.css';;
 import Image from 'next/image';
-
-// FontAwesome imports
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faReact, faJs, faNode } from '@fortawesome/free-brands-svg-icons';
+import styles from '../styles/HomePage.module.css';
 
+// Skills data for easy maintenance
+const SKILLS = [
+  { 
+    name: 'JavaScript', 
+    icon: <FontAwesomeIcon icon={faJs} className={`${styles.icon} ${styles.jsIcon}`} />,
+    isCustom: false 
+  },
+  { 
+    name: 'Express.js', 
+    icon: <FontAwesomeIcon icon={faNode} className={`${styles.icon} ${styles.nodeIcon}`} />,
+    isCustom: false 
+  },
+  { 
+    name: 'React.js', 
+    icon: <FontAwesomeIcon icon={faReact} className={`${styles.icon} ${styles.reactIcon}`} />, 
+    isCustom: false 
+  },
+  { 
+    name: 'Next.js', 
+    icon: <img src="/nextjs-icon.svg" alt="Next.js" className={styles.icon} />,
+    isCustom: true 
+  },
+  { 
+    name: 'PostgreSQL', 
+    icon: <img src="/pgsql.svg" alt="PostgreSQL" className={styles.icon} />,
+    isCustom: true 
+  }
+];
 
 export default function HomePage() {
   return (
-    <>
+    <main className={styles.mainContainer}>
       <div className={styles.container}>
         <div className={styles.background}>
           <h1>I CODE</h1>
           <h1>FUTURE!</h1>
         </div>
+        
         <div className={styles.foreground}>
           <div className={styles.content}>
             <h1 className={styles.name}>Prayag Choudhary</h1>
-            <h6 className={styles.bio}>Debugging Like a 
-              <span className={styles.react}> Pro.</span></h6>
+            <h2 className={styles.bio}>
+              Debugging Like a <span className={styles.react}>Pro.</span>
+            </h2>
 
-            {/* Skill Icons Section */}
-            <div className={styling.skillsContainer}>
-              {/* Skill item for JavaScript */}
-              <div className={styling.skillItem}>
-                <FontAwesomeIcon icon={faJs} size="3x" className={`${styling.icon} ${styling.jsIcon}`} />
-                <div className={styling.skillText}>JavaScript</div>
-              </div>
-
-              {/* Skill item for Express.js */}
-              <div className={styling.skillItem}>
-                <FontAwesomeIcon icon={faNode} size="3x" className={`${styling.icon} ${styling.nodeIcon}`} />
-                <div className={styling.skillText}>Express.js</div>
-              </div>
-
-              {/* Skill item for React */}
-              <div className={styling.skillItem}>
-                <FontAwesomeIcon icon={faReact} size="3x" className={`${styling.icon} ${styling.reactIcon}`} />
-                <div className={styling.skillText}>React</div>
-              </div>
-
-              {/* Skill item for Nextjs */}
-              <div className={styling.skillItem}>
-                <img src="/nextjs-icon.svg" alt="Next.js" className={`${styling.icon} ${styling.nextIcon}`} />
-               
-                <div className={styling.skillText}>Next.js</div>
-              </div>
-
-
-
-              {/* Skill item for PgSql */}
-              <div className={styling.skillItem}>
-                <img src="/pgsql.svg" alt="PgSql" className={`${styling.icon} ${styling.nextIcon}`} />
-
-              
-                <div className={styling.skillText}>PostgreSQL</div>
-              </div>
+            {/* Skills section */}
+            <div className={styles.skillsContainer}>
+              {SKILLS.map((skill, index) => (
+                <div key={index} className={styles.skillItem}>
+                  {skill.icon}
+                  <div className={styles.skillText}>{skill.name}</div>
+                </div>
+              ))}
             </div>
 
-
-            <div className={styling.forMobile}>
-              <Link href="/projects">
-                <button className={`${styles.button} ${styling.workBtn}`}>View Work</button>
+            {/* CTA buttons */}
+            <div className={styles.buttonContainer}>
+              <Link href="/projects" className={styles.linkButton}>
+                <button className={`${styles.button} ${styles.workBtn}`}>
+                  View Work
+                </button>
               </Link>
-              <Link href="/resume">
-                <button className={`${styles.outlined} ${styling.contactBtn}`}>My Resume</button>
+              <Link href="/resume" className={styles.linkButton}>
+                <button className={`${styles.outlined} ${styles.contactBtn}`}>
+                  My Resume
+                </button>
               </Link>
             </div>
           </div>
-          {/* Logo image */}
-          <div className={styling.imageWrapper}>
-            
-            <Image src="/Logo2.png" alt="Sarcastic Geek Logo" className={styling.myImg} width={300} height={350} />
+          
+          {/* Profile image */}
+          <div className={styles.imageWrapper}>
+            <Image 
+              src="/Logo2.png" 
+              alt="Sarcastic Geek Logo" 
+              className={styles.myImg} 
+              width={300} 
+              height={350}
+              priority
+            />
           </div>
         </div>
       </div>
-    </>
+    </main>
   );
 }
 

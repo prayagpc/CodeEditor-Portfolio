@@ -1,138 +1,270 @@
-/* styles/About.module.css */
+/* About page layout */
 .about {
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    padding: 20px;
-}
-
-.container {
+    padding: 3rem 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    /* min-height: 100vh; */
+   
+  }
+  
+  .container {
     width: 100%;
-}
-
-.grid {
+  }
+  
+  /* Profile section with grid layout */
+  .grid {
     display: grid;
-    grid-template-columns: 0fr 2fr 2fr;
-    gap: 20px;
+    grid-template-columns: auto 1fr;
+    gap: 2rem;
     width: 100%;
-}
-
-
-.imageContainer {
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  
+  .imageContainer {
     display: flex;
     align-items: center;
     justify-content: center;
     border: 1px solid #dedede;
-    box-shadow: 1px 3px 13px #1F2428;
+    box-shadow: 1px 3px 13px rgba(31, 36, 40, 0.5);
     border-radius: 50%;
     height: 150px;
     width: 150px;
-
-
-
-}
-
-.textContainer {
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .imageContainer:hover {
+    transform: scale(1.05);
+    box-shadow: 2px 5px 15px rgba(31, 36, 40, 0.7);
+  }
+  
+  .myImage {
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  /* Text content styling */
+  .textContainer {
     display: flex;
     flex-direction: column;
-    gap: 15px;
-    justify-content: flex-end;
-    align-items: flex-start;
-    height: 100%;
-}
-
-.textHead {
+    gap: 1rem;
+  }
+  
+  .textHead {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 24px;
-}
-
-.myImage {
-    border-radius: 50%;
-    
-}
-
-.list {
+    font-size: 1.75rem;
+    color: #0088cc;
+    margin: 0;
+    padding-bottom: 0.5rem;
+    position: relative;
+  }
+  
+  .textHead::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 50px;
+    background-color: #0088cc;
+  }
+  
+  .list {
     list-style: none;
     padding: 0;
-}
-
-.listItem {
+    margin: 0;
+  }
+  
+  .listItem {
     display: flex;
     align-items: center;
-    margin-bottom: 10px;
-    font-size: 18px;
+    margin-bottom: 0.75rem;
+    font-size: 1.125rem;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-
-.icon {
-    margin-right: 10px;
-}
-
-.strong {
+  }
+  
+  .icon {
+    margin-right: 0.75rem;
+    color: #0088cc;
+  }
+  
+  .strong {
     font-weight: 600;
-}
+    /* color: #333; */
+    color: #0088cc;
 
-.paragraph {
-    margin-top: 20px;
-    font-size: 18px;
+  }
+  
+  /* Bio paragraph */
+  .paragraph {
+    margin: 2rem 0;
+    font-size: 1.125rem;
+    line-height: 1.6;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-.paragraphSpan{
+  }
+  
+  .paragraphSpan {
     font-weight: 600;
-}
-
-.skillsSection {
-    margin-top: 40px;
-}
-
-.skillsSection h3 {
-    margin-bottom: 20px;
-}
-
-.skillsGrid {
+    color: #0088cc;
+  }
+  
+  /* Skills section */
+  .skillsSection {
+    margin-top: 2.5rem;
+  }
+  
+  .skillsSection h2 {
+    margin-bottom: 1.5rem;
+  }
+  
+  .skillsGrid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    /* Two columns for skills */
-    gap: 20px;
-}
-
-.skill {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  
+  .skill {
     display: flex;
     flex-direction: column;
-}
-
-.skillName {
+    margin-bottom: 0.5rem;
+  }
+  
+  .skillName {
     display: block;
-    /* font-weight: bold; */
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    margin-bottom: 5px;
-}
-
-.progressBar {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+  }
+  
+  .progressBar {
     background-color: #e0e0e0;
     border-radius: 5px;
     overflow: hidden;
     height: 10px;
     width: 100%;
-}
-
-.progress {
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .progress {
     background-color: #0088cc;
+    background-image: linear-gradient(45deg, 
+      rgba(255, 255, 255, 0.15) 25%, 
+      transparent 25%, 
+      transparent 50%, 
+      rgba(255, 255, 255, 0.15) 50%, 
+      rgba(255, 255, 255, 0.15) 75%, 
+      transparent 75%, 
+      transparent);
+    background-size: 1rem 1rem;
     height: 100%;
     width: 0;
-    transition: width 0.3s ease;
-}
-
-/* Media Query for Devices with Max Width of 700px */
-@media (max-width: 700px) {
-    .grid {
-        grid-template-columns: 1fr;
-        /* Single column layout */
-        gap: 20px;
+    transition: width 1s ease;
+    animation: progress-bar-stripes 1s linear infinite;
+  }
+  
+  @keyframes progress-bar-stripes {
+    from { background-position: 1rem 0; }
+    to { background-position: 0 0; }
+  }
+  
+  /* Media Queries for Responsive Design */
+  /* Large Screens */
+  @media (min-width: 1200px) {
+    .about {
+      padding: 1rem 2rem;
+      padding-bottom: 0;
     }
-
+    
     .skillsGrid {
-        grid-template-columns: 1fr;
-        /* Single column layout for skills on small screens */
+      grid-template-columns: repeat(3, 1fr);
     }
-}
+  }
+  
+  /* Medium Screens */
+  @media (max-width: 900px) {
+    .grid {
+      gap: 1.5rem;
+    }
+    
+    .skillsGrid {
+      gap: 1.25rem;
+    }
+    
+    .textHead {
+      font-size: 1.5rem;
+    }
+    
+    .listItem {
+      font-size: 1rem;
+    }
+    
+    .paragraph {
+      font-size: 1rem;
+    }
+  }
+  
+  /* Small Screens */
+  @media (max-width: 700px) {
+    .about {
+      padding: 2rem 1rem;
+    }
+    
+    .grid {
+      grid-template-columns: 1fr;
+      /* text-align: center; */
+    }
+    
+    .imageContainer {
+      margin: 0 auto 1.5rem;
+    }
+    
+    .textContainer {
+      align-items: center;
+    }
+    
+    .textHead::after {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    
+    .list {
+      width: 100%;
+      max-width: 400px;
+    }
+    
+    
+    
+    .skillsGrid {
+      grid-template-columns: 1fr;
+    }
+    
+    .skillsSection h2 {
+      text-align: center;
+    }
+  }
+  
+  /* Extra Small Screens */
+  @media (max-width: 480px) {
+    .listItem {
+      font-size: 0.875rem;
+    }
+    
+    .icon {
+      margin-right: 0.5rem;
+    }
+    
+    .paragraph {
+      font-size: 0.875rem;
+    }
+    
+    .skillName {
+      font-size: 0.875rem;
+    }
+    
+    .progressBar {
+      height: 8px;
+    }
+  }
